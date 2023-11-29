@@ -1,3 +1,4 @@
+
 <h1 class="title">Inscription bénéficiaires</h1>
 
 <form [formGroup]="personnesForm" (ngSubmit)="onSubmit()">
@@ -17,7 +18,18 @@
             <input type="date" id="Date_de_naissance" formControlName="Date_de_naissance">
 
             <label for="Revenus">Revenus</label>
-            <input type="text" id="Revenus" formControlName="Revenus">
+            <select id="Revenus" formControlName="Revenus">
+                <option value="Chomage">Chômage</option>
+                <option value="CPAS">CPAS</option>
+                <option value="Mutuelle">Mutuelle</option>
+                <option value="Pension">Pension</option>
+                <option value="Sans_Revenus">Sans revenus</option>
+                <option value="Autre">Autre</option>
+
+
+
+                <!-- Ajoutez d'autres options selon vos besoins -->
+              </select>
         </div>
     </article>
     <article>

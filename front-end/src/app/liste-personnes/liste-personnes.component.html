@@ -3,15 +3,19 @@
     <ul>
       <!-- Utiliser *ngFor pour itérer sur la liste des bénéficiaires -->
       <li *ngFor="let personne of personnes" class="personne-container">
-        <div class="info-column" style="border: 1 solid black;">
+        <div class="info-column">
           <p><strong>Chef de ménage</strong> {{ personne.Chef_Menage ? 'Oui' : 'Non' }}</p>
+        </div>
+        
+        <div class="info-column">
+          
           <p><strong>Nom </strong> {{ personne.Nom }}</p>
         </div>
         <div class="info-column">
           <p><strong>Prénom </strong> {{ personne.Prenom }}</p>
         </div>
         <div class="info-column">
-          <p><strong>Date de naissance </strong> {{ personne.Date_de_naissance }}</p>
+          <p><strong>Date de naissance </strong> {{ personne.Date_de_naissance | date: 'dd/MM/yyyy' }}</p>
         </div>
         <div class="info-column">
           <p><strong>Revenus </strong> {{ personne.Revenus }}</p>
@@ -61,7 +65,8 @@
         <div class="info-column">
           <p><strong>Pensionné </strong> {{ personne.Pensionne ? 'Oui' : 'Non' }}</p>
         </div>
-  
+      <hr>  
       </li>
+      
     </ul>
   </div>

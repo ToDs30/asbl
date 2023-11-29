@@ -39,6 +39,8 @@ const personnesController = {
         Chef_Menage,
       } = req.body;
 
+      
+
       // Exécution de la requête SQL pour insérer un nouveau bénéficiaire dans la base de données
       const query = await db.query(
         `INSERT INTO Personne (Nom, Prenom, Rue, Numero, Code_Postal, Commune, Revenus, Date_de_naissance, Handicape, Immigres, Sans_Abris, Sans_Papier, Bebe_0_6_Mois, Bebe_6_24_Mois, Enfants_2_14_Ans, Ados_14_18_Ans, J_Adulte_18_24_Ans, Adultes_25_64_Ans, Pensionne, Chef_menage)

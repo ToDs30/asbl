@@ -9,6 +9,7 @@ import { ExpressService } from '../services/personne.service';
 })
 export class AddPersonnesComponent {
 personnesForm: FormGroup;
+selectedRevenus: string = '';
 
 constructor(private formBuilder: FormBuilder, private expressService: ExpressService){
   this.personnesForm = this.formBuilder.group({

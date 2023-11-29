@@ -1,0 +1,26 @@
+.title{
+    background-color: aqua;
+    text-align: center;
+}
+
+
+form{
+    background-color: blanchedalmond;
+    text-align: center;
+}
+
+
+/* .info3,
+.info4{
+    display: flex;
+    flex-direction: column;
+} */
+
+.Complementaires {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+margin-top: 1rem;
+padding: 1rem;
+}

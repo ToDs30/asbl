@@ -71,7 +71,9 @@ const taskController = {
       res.status(500).send("Internal Server Error");
     }
   }
+  
 };
+
 
 // Exporte le contrôleur de tâches pour être utilisé ailleurs dans l'application
 module.exports = taskController;
