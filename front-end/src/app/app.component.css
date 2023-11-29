@@ -1,0 +1,10 @@
+.navigate{
+    background-color: rgba(1, 136, 240, 0.926);
+flex-direction: row ;
+display:flex;
+font-size: large;
+justify-content: space-between;
+margin-top: 1rem;
+padding: 1rem;
+
+}

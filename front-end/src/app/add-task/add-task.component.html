@@ -1,0 +1,21 @@
+<!-- Formulaire lié au groupe de formulaires 'taskForm' et gérant l'événement de soumission -->
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <!-- Div contenant les champs de formulaire -->
+
+    <div>
+        <!-- Champ de formulaire pour le nom de la tâche -->
+        <label for="TaskName">Tache</label>
+        <input type="text" id="TaskName" formControlName="TaskName">
+
+        <!-- Champ de formulaire pour la description de la tâche -->
+        <label for="Description">Description</label>
+        <input type="text" id="Description" formControlName="Description">
+
+        <!-- Champ de formulaire pour la date limite de la tâche -->
+        <label for="Deadline">A faire pour</label>
+        <input type="date" id="Deadline" formControlName="Deadline">
+    </div>
+
+    <!-- Bouton de soumission du formulaire -->
+    <button type="submit">Soumettre</button>
+</form>

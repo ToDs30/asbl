@@ -1,0 +1,67 @@
+<div>
+    <!-- Afficher les bénéficiaires dans une liste -->
+    <ul>
+      <!-- Utiliser *ngFor pour itérer sur la liste des bénéficiaires -->
+      <li *ngFor="let personne of personnes" class="personne-container">
+        <div class="info-column" style="border: 1 solid black;">
+          <p><strong>Chef de ménage</strong> {{ personne.Chef_Menage ? 'Oui' : 'Non' }}</p>
+          <p><strong>Nom </strong> {{ personne.Nom }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Prénom </strong> {{ personne.Prenom }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Date de naissance </strong> {{ personne.Date_de_naissance }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Revenus </strong> {{ personne.Revenus }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Rue </strong> {{ personne.Rue }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Numéro </strong> {{ personne.Numero }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Code Postal </strong> {{ personne.Code_Postal }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Commune </strong> {{ personne.Commune }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Handicapé </strong> {{ personne.Handicape ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Immigrés </strong> {{ personne.Immigres ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Sans Abris </strong> {{ personne.Sans_Abri ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Sans Papier </strong> {{ personne.Sans_Papier ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Bébé 0-6 Mois </strong> {{ personne.bebe0_6Mois ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Bébé 6-24 Mois </strong> {{ personne.Bebe_6_24_Mois ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Enfants 2-14 Ans </strong> {{ personne.Enfants_2_14_Ans ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Ados 14-18 Ans </strong> {{ personne.Ados_14_18_Ans ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>J. Adulte 18-24 Ans </strong> {{ personne.J_Adulte_18_24_Ans ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Adultes 25-64 Ans </strong> {{ personne.Adultes_25_64_Ans ? 'Oui' : 'Non' }}</p>
+        </div>
+        <div class="info-column">
+          <p><strong>Pensionné </strong> {{ personne.Pensionne ? 'Oui' : 'Non' }}</p>
+        </div>
+  
+      </li>
+    </ul>
+  </div>
