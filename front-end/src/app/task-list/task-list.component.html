@@ -1,16 +1,19 @@
 <div>
-    <ul>
-        <li *ngFor="let task of tasks" class="task-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Tâche</th>
+                <th>Description</th>
+                <th>A faire pour le</th>
+            </tr>
+        </thead>
+        <tbody>
 
-        <div class="info-column">
-            <p><Strong>Tâche</Strong> {{task.TaskName}}</p>
-        </div>
-        <div class="info-column">
-            <p><Strong>Description</Strong> {{task.Description}}</p>
-        </div>
-        <div class="info-column">
-            <p><Strong>A faire pour le : </Strong> {{task.Deadline | date :'dd/MM/yyyy'}}</p>
-        </div>
-    </li>
-    </ul>
+            <tr *ngFor="let task of tasks" class="task-container">
+                <td>{{ task.TaskName }}</td>
+                <td>{{ task.Description }}</td>
+                <td>{{ task.Deadline | date: 'dd/MM/yyyy' }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

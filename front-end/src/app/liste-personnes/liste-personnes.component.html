@@ -1,72 +1,55 @@
 <div>
-    <!-- Afficher les bénéficiaires dans une liste -->
-    <ul>
+  <!-- Afficher les bénéficiaires dans un tableau -->
+  <table>
+    <thead>
+      <tr>
+        <th>Chef de ménage</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de naissance</th>
+        <th>Revenus</th>
+        <th>Rue</th>
+        <th>Numéro</th>
+        <th>Code Postal</th>
+        <th>Commune</th>
+        <th>Handicapé</th>
+        <th>Immigrés</th>
+        <th>Sans Abris</th>
+        <th>Sans Papier</th>
+        <th>Bébé 0-6 Mois</th>
+        <th>Bébé 6-24 Mois</th>
+        <th>Enfants 2-14 Ans</th>
+        <th>Ados 14-18 Ans</th>
+        <th>J. Adulte 18-24 Ans</th>
+        <th>Adultes 25-64 Ans</th>
+        <th>Pensionné</th>
+      </tr>
+    </thead>
+    <tbody>
       <!-- Utiliser *ngFor pour itérer sur la liste des bénéficiaires -->
-      <li *ngFor="let personne of personnes" class="personne-container">
-        <div class="info-column">
-          <p><strong>Chef de ménage</strong> {{ personne.Chef_Menage ? 'Oui' : 'Non' }}</p>
-        </div>
-        
-        <div class="info-column">
-          
-          <p><strong>Nom </strong> {{ personne.Nom }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Prénom </strong> {{ personne.Prenom }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Date de naissance </strong> {{ personne.Date_de_naissance | date: 'dd/MM/yyyy' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Revenus </strong> {{ personne.Revenus }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Rue </strong> {{ personne.Rue }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Numéro </strong> {{ personne.Numero }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Code Postal </strong> {{ personne.Code_Postal }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Commune </strong> {{ personne.Commune }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Handicapé </strong> {{ personne.Handicape ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Immigrés </strong> {{ personne.Immigres ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Sans Abris </strong> {{ personne.Sans_Abri ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Sans Papier </strong> {{ personne.Sans_Papier ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Bébé 0-6 Mois </strong> {{ personne.bebe0_6Mois ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Bébé 6-24 Mois </strong> {{ personne.Bebe_6_24_Mois ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Enfants 2-14 Ans </strong> {{ personne.Enfants_2_14_Ans ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Ados 14-18 Ans </strong> {{ personne.Ados_14_18_Ans ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>J. Adulte 18-24 Ans </strong> {{ personne.J_Adulte_18_24_Ans ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Adultes 25-64 Ans </strong> {{ personne.Adultes_25_64_Ans ? 'Oui' : 'Non' }}</p>
-        </div>
-        <div class="info-column">
-          <p><strong>Pensionné </strong> {{ personne.Pensionne ? 'Oui' : 'Non' }}</p>
-        </div>
-      <hr>  
-      </li>
+      <tr *ngFor="let personne of personnes" class="personne-container">
+        <td>{{ personne.Chef_Menage ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Nom }}</td>
+        <td>{{ personne.Prenom }}</td>
+        <td>{{ personne.Date_de_naissance | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ personne.Revenus }}</td>
+        <td>{{ personne.Rue }}</td>
+        <td>{{ personne.Numero }}</td>
+        <td>{{ personne.Code_Postal }}</td>
+        <td>{{ personne.Commune }}</td>
+        <td>{{ personne.Handicape ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Immigres ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Sans_Abri ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Sans_Papier ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.bebe0_6Mois ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Bebe_6_24_Mois ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Enfants_2_14_Ans ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Ados_14_18_Ans ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.J_Adulte_18_24_Ans ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Adultes_25_64_Ans ? 'Oui' : 'Non' }}</td>
+        <td>{{ personne.Pensionne ? 'Oui' : 'Non' }}</td>
+      </tr>
       
-    </ul>
-  </div>
+    </tbody>
+  </table>
+</div>
