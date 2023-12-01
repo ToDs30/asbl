@@ -31,13 +31,10 @@ const taskController = {
         VALUES('${TaskName}','${Description}', '${Deadline}', '${Status}')`
       );
 
-
+      // Vérifie si la requête a réussi et renvoie une réponse avec le statut 203 (Non-Authoritative Information)
       if (query) {
-        res.status(203).json({message: 'Task correctly added'});
-      }
-
-      
-      
+        res.status(203).json({ message: 'Task correctly added' });
+      }      
     } catch (error) {
       // En cas d'erreur, affiche l'erreur dans la console et envoie une réponse d'erreur
       console.error(error);
@@ -63,7 +60,7 @@ const taskController = {
         Status: row.Status
       }));
       
-      // Envoie toutes les tâches en tant que réponse
+      // Envoie toutes les tâches en tant que réponse avec le statut 200 (OK)
       res.status(200).send(Tasks);
     } catch (error) {
       // En cas d'erreur, affiche l'erreur dans la console et envoie une réponse d'erreur
@@ -71,9 +68,7 @@ const taskController = {
       res.status(500).send("Internal Server Error");
     }
   }
-  
 };
-
 
 // Exporte le contrôleur de tâches pour être utilisé ailleurs dans l'application
 module.exports = taskController;

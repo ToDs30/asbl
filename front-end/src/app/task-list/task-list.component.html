@@ -1,28 +1,35 @@
-
-
 <div>
-    <h2>Liste de tâches</h2>
-    <table>
-        <thead>
-        <tr>
-          <th>Tâche</th>
-          <th>Description</th>
-          <th>A faire pour le</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let task of tasks; let i = index" 
-            class="task-container" 
-            [ngStyle]="{'background-color': task.taskStatus ? '#4CAF50' : '#FF0000', 'color': '#fff'}">
-          <td>{{ task.TaskName }}</td>
-          <td>{{ task.Description }}</td>
-          <td>{{ task.Deadline | date: 'dd/MM/yyyy' }}</td>
-          <td>
-            <button type="button" (click)="effectuerClick(i)">Effectuer</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <!-- Titre de la liste de tâches -->
+  <h2>Liste de tâches</h2>
   
+  <!-- Tableau affichant les tâches -->
+  <table>
+      <!-- En-tête du tableau -->
+      <thead>
+          <tr>
+              <!-- Colonnes du tableau : Tâche, Description, A faire pour le, Action -->
+              <th>Tâche</th>
+              <th>Description</th>
+              <th>A faire pour le</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      
+      <!-- Corps du tableau contenant les données des tâches -->
+      <tbody>
+          <!-- Utilisation de la directive *ngFor pour itérer sur chaque tâche dans la liste 'tasks' -->
+          <tr *ngFor="let task of tasks; let i = index" class="task-container" 
+              [ngStyle]="{'background-color': task.taskStatus ? '#4CAF50' : '#FF0000', 'color': '#fff'}">
+              <!-- Affichage des informations de chaque tâche dans les cellules du tableau -->
+              <td>{{ task.TaskName }}</td>
+              <td>{{ task.Description }}</td>
+              <td>{{ task.Deadline | date: 'dd/MM/yyyy' }}</td>
+              
+              <!-- Colonne d'action avec un bouton 'Effectuer' qui appelle la méthode effectuerClick avec l'index i -->
+              <td>
+                  <button type="button" (click)="effectuerClick(i)">Effectuer</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

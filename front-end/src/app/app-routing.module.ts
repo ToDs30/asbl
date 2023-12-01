@@ -4,6 +4,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { AddPersonnesComponent } from './add-personnes/add-personnes.component';
 import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'add-personnes', component: AddPersonnesComponent},
   { path: 'liste-personnes', component: ListePersonnesComponent},
   { path: 'task-list', component: TaskListComponent},
+  { path: 'app-index', component: IndexComponent},
 ];
 
 @NgModule({

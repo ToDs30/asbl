@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TaskListComponent } from './task-list/task-list.component';
     ListePersonnesComponent,
     TaskListComponent,
     FilterPipe,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,

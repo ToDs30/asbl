@@ -1,5 +1,12 @@
 
-
+body{
+  background-image: url('/assets/images/distrib.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
 
 
 td{
@@ -24,4 +31,5 @@ tr:nth-child(odd){
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  background-color: cadetblue;
 }
