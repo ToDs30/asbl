@@ -1,19 +1,28 @@
+
+
 <div>
+    <h2>Liste de tâches</h2>
     <table>
         <thead>
-            <tr>
-                <th>Tâche</th>
-                <th>Description</th>
-                <th>A faire pour le</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr *ngFor="let task of tasks" class="task-container">
-                <td>{{ task.TaskName }}</td>
-                <td>{{ task.Description }}</td>
-                <td>{{ task.Deadline | date: 'dd/MM/yyyy' }}</td>
-            </tr>
-        </tbody>
+        <tr>
+          <th>Tâche</th>
+          <th>Description</th>
+          <th>A faire pour le</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index" 
+            class="task-container" 
+            [ngStyle]="{'background-color': task.taskStatus ? '#4CAF50' : '#FF0000', 'color': '#fff'}">
+          <td>{{ task.TaskName }}</td>
+          <td>{{ task.Description }}</td>
+          <td>{{ task.Deadline | date: 'dd/MM/yyyy' }}</td>
+          <td>
+            <button type="button" (click)="effectuerClick(i)">Effectuer</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
+  

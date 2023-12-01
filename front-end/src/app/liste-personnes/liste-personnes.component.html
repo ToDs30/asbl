@@ -1,5 +1,51 @@
+
+  
+
+<!-- Tableau affichant le nombre de personnes dans différentes catégories -->
 <div>
-  <!-- Afficher les bénéficiaires dans un tableau -->
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre de Ménage</th>
+        <th>Nombre de personnes handicapées</th>
+        <th>Nombre de personnes Immigrés</th>
+        <th>Nombre de personnes Sans Papier</th>
+        <th>Nombre de personnes Sans-Abris</th>
+        <th>Nombre de Bébé 0-6 mois</th>
+        <th>Nombre de Bébé 6-24 mois</th>
+        <th>Nombre d'enfants 2-14 ans</th>
+        <th>Nombre d'ados 14-18 ans</th>
+        <th>Nombre de jeunes adultes</th>
+        <th>Nombre d'adultes</th>
+        <th>Nombre de pensionnés</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ nombreMenage }}</td>
+        <td>{{ nombreHandicape }}</td>
+        <td>{{ nombreImmigres }}</td>
+        <td>{{ nombreSansPapier }}</td>
+        <td>{{ nombreSansAbris }}</td>
+        <td>{{ nombreBebe0_6 }}</td>
+        <td>{{ nombreBebe6_24 }}</td>
+        <td>{{ nombreEnfant2_14 }}</td>
+        <td>{{ nombreAdos14_18 }}</td>
+        <td>{{ nombreJ_Adulte }}</td>
+        <td>{{ nombrerAdulte }}</td>
+        <td>{{ nombrePensionne }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section de recherche par adresse -->
+<div class="recherche">
+  <p>Recherche :  <input type="text" placeholder="Recherche par adresse" [(ngModel)]="rechercheAdressePersonne"/></p>
+</div>
+
+<!-- Tableau affichant les détails des personnes avec filtre de recherche -->
+<div>
   <table>
     <thead>
       <tr>
@@ -26,9 +72,9 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Utiliser *ngFor pour itérer sur la liste des bénéficiaires -->
-      <tr *ngFor="let personne of personnes" class="personne-container">
-        <td>{{ personne.Chef_Menage ? 'Oui' : 'Non' }}</td>
+      <!-- Boucle sur les personnes avec filtre de recherche -->
+      <tr *ngFor="let personne of personnes | filter : rechercheAdressePersonne" class="personne-container">
+        <td [ngClass]="{'chef-menage' : personne.Chef_Menage}" >{{ personne.Chef_Menage ? 'Oui' : 'Non' }}</td>
         <td>{{ personne.Nom }}</td>
         <td>{{ personne.Prenom }}</td>
         <td>{{ personne.Date_de_naissance | date: 'dd/MM/yyyy' }}</td>
@@ -49,7 +95,6 @@
         <td>{{ personne.Adultes_25_64_Ans ? 'Oui' : 'Non' }}</td>
         <td>{{ personne.Pensionne ? 'Oui' : 'Non' }}</td>
       </tr>
-      
     </tbody>
   </table>
 </div>
