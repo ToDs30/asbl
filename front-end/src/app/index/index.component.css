@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.histoire {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.histoire p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+}
+.heros {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.heros h3 {
+    color: #0011ff;
+    margin-bottom: 10px;
+}
+.heros p {
+    text-align: justify;
+    line-height: 1.6;
+    color: #444;
+}
+.heros img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+

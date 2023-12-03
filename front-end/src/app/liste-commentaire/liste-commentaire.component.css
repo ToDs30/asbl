@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(0deg, #0011ff 0%, #9eb3ff 100%);
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Couleur du texte par défaut */
+}
+
+div {
+    max-width: 800px; /* Ajustez la largeur de la liste des messages selon vos besoins */
+    margin: 50px auto; /* Centrer la liste des messages sur la page */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour une meilleure lisibilité */
+    border-radius: 10px;
+}
+
+h2 {
+    color: #fff; /* Couleur du texte du titre */
+    background-color: #336699; /* Nouvelle couleur de fond du titre */
+    padding: 15px; /* Espace intérieur autour du texte */
+    border-radius: 8px; /* Coins arrondis */
+    text-align: center; /* Centrer le texte */
+}
+
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50; /* Couleur de fond de l'en-tête */
+    color: white; /* Couleur du texte de l'en-tête */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.commentaire-container td {
+    /* Styles spécifiques pour les cellules de la liste des messages si nécessaire */
+}
+

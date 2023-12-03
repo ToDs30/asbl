@@ -1,0 +1,23 @@
+<form [formGroup]="commentaireForm" (ngSubmit)="onSubmit()">
+<div>
+    <label for="Nom">Nom</label>
+    <input type="text" placeholder="Entrez votre Nom" id="Nom" formControlName="Nom">
+
+    <label for="Prenom">Prenom</label>
+    <input type="text" placeholder="Entrez votre Prénom" id="Prenom" formControlName="Prenom">
+    
+    <label for="Date_COM">Date</label>
+    <input type="date" id="Date_COM" formControlName="Date_COM">
+    
+    <label for="Sujet">Sujet</label>
+    <input type="text" placeholder="Donnez un titre à votre message" id="Sujet" formControlName="Sujet">
+
+    <label for="Descrip">Description</label>
+    <input type="text" placeholder="Ecrivez votre message " id="Descrip" formControlName="Descrip">
+    
+    <button (click)="onSubmit" > Soumettre </button>
+
+</div>
+
+
+</form>

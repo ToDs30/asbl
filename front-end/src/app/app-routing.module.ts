@@ -5,6 +5,10 @@ import { AddPersonnesComponent } from './add-personnes/add-personnes.component';
 import { ListePersonnesComponent } from './liste-personnes/liste-personnes.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { IndexComponent } from './index/index.component';
+import { AddCommentaireComponent } from './add-commentaire/add-commentaire.component';
+import { ListeCommentaireComponent } from './liste-commentaire/liste-commentaire.component';
+import { GalerieComponent } from './galerie/galerie.component';
+import { InfoComponent } from './info/info.component';
 
 
 const routes: Routes = [
@@ -13,6 +17,10 @@ const routes: Routes = [
   { path: 'liste-personnes', component: ListePersonnesComponent},
   { path: 'task-list', component: TaskListComponent},
   { path: 'app-index', component: IndexComponent},
+  { path: 'app-add-commentaire', component: AddCommentaireComponent},
+  { path: 'app-liste-commentaire', component: ListeCommentaireComponent},
+  { path: 'galerie', component: GalerieComponent},
+  { path: 'info', component: InfoComponent},
 ];
 
 @NgModule({

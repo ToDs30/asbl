@@ -12,6 +12,12 @@ import { ListePersonnesComponent } from './liste-personnes/liste-personnes.compo
 import { TaskListComponent } from './task-list/task-list.component';
 import { IndexComponent } from './index/index.component';
 
+import { AddCommentaireComponent } from './add-commentaire/add-commentaire.component';
+import { ListeCommentaireComponent } from './liste-commentaire/liste-commentaire.component';
+import { CommonModule } from '@angular/common';
+import { GalerieComponent } from './galerie/galerie.component';
+import { InfoComponent } from './info/info.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +27,11 @@ import { IndexComponent } from './index/index.component';
     TaskListComponent,
     FilterPipe,
     IndexComponent,
+    
+    AddCommentaireComponent,
+    ListeCommentaireComponent,
+    GalerieComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +39,7 @@ import { IndexComponent } from './index/index.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

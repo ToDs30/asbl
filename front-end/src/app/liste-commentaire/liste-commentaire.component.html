@@ -1,0 +1,33 @@
+<div>
+    <!-- Titre de la liste de tâches -->
+    <h2>Liste des messages</h2>
+    
+    <!-- Tableau affichant les tâches -->
+    <table>
+        <!-- En-tête du tableau -->
+        <thead>
+            <tr>
+                <!-- Colonnes du tableau : Tâche, Description, A faire pour le, Action -->
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date</th>
+                <th>Sujet</th>
+                <th>Messages</th>
+            </tr>
+        </thead>
+        
+        <!-- Corps du tableau contenant les données des tâches -->
+        <tbody>
+            <!-- Utilisation de la directive *ngFor pour itérer sur chaque tâche dans la liste 'tasks' -->
+            <tr *ngFor="let commentaire of commentaires; let i = index" class="commentaire-container">
+                <!-- Affichage des informations de chaque tâche dans les cellules du tableau -->
+                <td>{{ commentaire.Nom }}</td>
+                <td>{{ commentaire.Prenom }}</td>
+                <td>{{ commentaire.Date_COM | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ commentaire.Sujet }}</td>
+                <td>{{ commentaire.Descrip}}</td>                        
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  

@@ -1,35 +1,72 @@
-
-body{
-  background-image: url('/assets/images/distrib.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
+/* Nouveau style du tableau principal */
+table.personne-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre légère */
+  border-radius: 12px; /* Coins arrondis pour le tableau */
+  overflow: hidden;
 }
 
-
-td{
-  text-align: center;
+/* Nouveau style de l'en-tête du tableau */
+thead {
+  background-color: #336699; /* Couleur de fond de l'en-tête */
+  color: white; /* Couleur du texte de l'en-tête */
 }
 
-th{
-  background-color: rgb(0, 94, 255);
-}
-tr:nth-child(even){
-  background-color: rgb(180, 253, 253);
-}
-tr:nth-child(odd){
-  background-color: rgb(88, 247, 255);
-}
-
-.chef-menage{
-  background-color: green;
+/* Nouveau style des cellules de l'en-tête */
+th {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #4CAF50; /* Couleur de bordure des titres de colonne */
+  border-top: none;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0; /* Coins arrondis pour le haut des cellules */
 }
 
-.recherche{
+/* Nouveau style des lignes du tableau */
+tr {
+  border-bottom: 1px solid #4CAF50; /* Nouvelle couleur pour les lignes du tableau */
+}
+
+/* Nouveau style des cellules du tableau */
+td {
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Nouveau style pour la classe 'chef-menage' */
+.chef-menage {
+  font-weight: bold;
+  color: #4CAF50; /* Nouvelle couleur pour les chefs de ménage */
+}
+
+/* Nouveau style de la section de recherche */
+.recherche {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
-  background-color: cadetblue;
+  margin-top: 20px;
+}
+
+/* Nouveau style du champ de recherche */
+.recherche input {
+  padding: 10px;
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease; /* Ajout d'une transition pour une animation en douceur */
+}
+
+/* Nouveau style pour une alternance de couleur des lignes du tableau */
+.personne-container:nth-child(even) {
+  background-color: #e6f7ff; /* Nouvelle couleur pour les lignes paires */
+}
+
+/* Nouveau style pour mettre en évidence la recherche */
+.personne-container.highlight {
+  background-color: #ffcccb; /* Couleur de mise en évidence, ajustez selon vos préférences */
+  transition: background-color 0.3s ease; /* Ajout d'une transition pour une mise en évidence en douceur */
 }

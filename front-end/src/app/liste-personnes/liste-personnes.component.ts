@@ -25,6 +25,7 @@ export class ListePersonnesComponent implements OnInit {
   nombreJ_Adulte: number = 0;
   nombrerAdulte: number = 0;
   nombrePensionne: number = 0;
+  //nombrePersonne: number = 0;
   rechercheAdressePersonne: string = '';
 
   // Injecte le service HttpClient dans le constructeur du composant
@@ -55,7 +56,7 @@ export class ListePersonnesComponent implements OnInit {
         this.nombreJ_Adulte = this.personnes.filter(personne => personne.J_Adulte_18_24_Ans === true).length;
         this.nombrerAdulte = this.personnes.filter(personne => personne.Adultes_25_64_Ans === true).length;
         this.nombrePensionne = this.personnes.filter(personne => personne.Pensionne === true).length;
-
+       // this.nombrePersonne = this.personnes.filter(personne => personne).length;
       }, error => {
         // Gère les erreurs en affichant un message dans la console
         console.error('Erreur lors de la récupération des bénéficiaires : ', error);
