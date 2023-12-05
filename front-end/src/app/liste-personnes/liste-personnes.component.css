@@ -1,4 +1,4 @@
-/* Nouveau style du tableau principal */
+
 table.personne-table {
   width: 100%;
   border-collapse: collapse;
@@ -12,36 +12,40 @@ table.personne-table {
 thead {
   background-color: #336699; /* Couleur de fond de l'en-tête */
   color: white; /* Couleur du texte de l'en-tête */
+  text-align: center;
 }
 
-/* Nouveau style des cellules de l'en-tête */
+
 th {
-  padding: 15px;
+  padding: 1px;
   text-align: left;
-  border: 1px solid #4CAF50; /* Couleur de bordure des titres de colonne */
+  border: 1px solid #4ca2af; /* Couleur de bordure des titres de colonne */
   border-top: none;
   border-bottom: none;
   border-radius: 12px 12px 0 0; /* Coins arrondis pour le haut des cellules */
+  text-align: center;
 }
 
 /* Nouveau style des lignes du tableau */
 tr {
-  border-bottom: 1px solid #4CAF50; /* Nouvelle couleur pour les lignes du tableau */
+  border-bottom: 1px solid #4c9baf;
+  text-align: center;
 }
 
 /* Nouveau style des cellules du tableau */
 td {
-  padding: 15px;
+  padding: 1px;
   border: 1px solid #ddd;
+  text-align: center;
 }
 
-/* Nouveau style pour la classe 'chef-menage' */
+
 .chef-menage {
   font-weight: bold;
-  color: #4CAF50; /* Nouvelle couleur pour les chefs de ménage */
+  background-color: greenyellow;
 }
 
-/* Nouveau style de la section de recherche */
+
 .recherche {
   display: flex;
   align-items: center;
@@ -49,7 +53,7 @@ td {
   margin-top: 20px;
 }
 
-/* Nouveau style du champ de recherche */
+
 .recherche input {
   padding: 10px;
   width: 300px; /* Ajustez la largeur selon vos besoins */
@@ -60,12 +64,12 @@ td {
   transition: border-color 0.3s ease; /* Ajout d'une transition pour une animation en douceur */
 }
 
-/* Nouveau style pour une alternance de couleur des lignes du tableau */
+
 .personne-container:nth-child(even) {
-  background-color: #e6f7ff; /* Nouvelle couleur pour les lignes paires */
+  background-color: #93d6f5; /* Nouvelle couleur pour les lignes paires */
 }
 
-/* Nouveau style pour mettre en évidence la recherche */
+
 .personne-container.highlight {
   background-color: #ffcccb; /* Couleur de mise en évidence, ajustez selon vos préférences */
   transition: background-color 0.3s ease; /* Ajout d'une transition pour une mise en évidence en douceur */

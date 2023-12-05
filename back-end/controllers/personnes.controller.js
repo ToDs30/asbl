@@ -124,6 +124,7 @@ const personnesController = {
       res.status(500).send("Internal Server Error");
     }
   },
+  
 };
 
 // Export du contrôleur pour être utilisé ailleurs dans l'application

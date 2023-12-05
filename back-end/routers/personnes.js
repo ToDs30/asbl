@@ -10,5 +10,6 @@ personnesRouter.post('/add-personnes', personnesController.addPersonnes);
 // Définit une route GET pour récupérer la liste de tous les bénéficiaires en utilisant la méthode getAll du contrôleur
 personnesRouter.get('/getAll', personnesController.getAll);
 
+
 // Exporte le routeur personnesRouter pour être utilisé dans d'autres fichiers
 module.exports = personnesRouter;

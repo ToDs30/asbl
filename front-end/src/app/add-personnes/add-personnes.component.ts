@@ -5,7 +5,7 @@ import { ExpressService } from '../services/personne.service';
 
 // Définition du composant Angular
 @Component({
-  selector: 'app-add-personnes',
+  selector: 'add-personnes',
   templateUrl: './add-personnes.component.html',
   styleUrls: ['./add-personnes.component.css']
 })

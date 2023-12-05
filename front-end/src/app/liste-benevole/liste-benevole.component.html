@@ -1,0 +1,55 @@
+<div>
+  <table class="personne-table">
+      <thead>
+          <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>GSM</th>
+              <th>Date de naissance</th>
+              <th>Rue</th>
+              <th>Numero</th>
+              <th>Boite</th>
+              <th>Code Postal</th>
+              <th>Commune</th>
+          </tr>
+      </thead>
+  </table>
+</div>
+
+<!-- Section de recherche par adresse -->
+<div class="recherche">
+  <p>Recherche :
+      <input type="text" placeholder="Recherche par rue ou numéro" [(ngModel)]="rechercheAdresseBenevole" />
+  </p>
+</div>
+
+<!-- Tableau affichant les détails des bénévoles avec filtre de recherche -->
+<div>
+  <table class="personne-table">
+      <thead>
+          <tr>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>GSM</th>
+              <th>Date de naissance</th>
+              <th>Rue</th>
+              <th>Numero</th>
+              <th>Code Postal</th>
+              <th>Commune</th>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Boucle sur les bénévoles avec filtre de recherche -->
+          <tr *ngFor="let benevole of benevoles | filter: rechercheAdresseBenevole" class="personne-container">
+              <td>{{ benevole.Nom }}</td>
+              <td>{{ benevole.Prenom }}</td>
+              <td>{{ benevole.GSM | gsmFormat }}</td>
+              <td>{{ benevole.Date_Naissance | date: 'dd/MM/yyyy' }}</td>
+              <td>{{ benevole.Rue }}</td>
+              <td>{{ benevole.Numero }}</td>
+              <td>{{ benevole.CodeP }}</td>
+              <td>{{ benevole.Commune }}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

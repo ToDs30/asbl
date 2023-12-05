@@ -1,11 +1,9 @@
-
-  
-
 <!-- Tableau affichant le nombre de personnes dans différentes catégories -->
 <div>
   <table>
     <thead>
       <tr>
+        <th>Nombre de personne</th>
         <th>Nombre de Ménage</th>
         <th>Nombre de personnes handicapées</th>
         <th>Nombre de personnes Immigrés</th>
@@ -22,6 +20,7 @@
     </thead>
     <tbody>
       <tr>
+        <td>{{ nombrePersonne}}</td>
         <td>{{ nombreMenage }}</td>
         <td>{{ nombreHandicape }}</td>
         <td>{{ nombreImmigres }}</td>
@@ -41,7 +40,9 @@
 
 <!-- Section de recherche par adresse -->
 <div class="recherche">
-  <p>Recherche :  <input type="text" placeholder="Recherche par rue" [(ngModel)]="rechercheAdressePersonne"/></p>
+  <p>Recherche :  
+    <input type="text" placeholder="Recherche par rue ou numéro" [(ngModel)]="rechercheAdressePersonne"/>
+  </p>
 </div>
 
 <!-- Tableau affichant les détails des personnes avec filtre de recherche -->
@@ -73,7 +74,7 @@
     </thead>
     <tbody>
       <!-- Boucle sur les personnes avec filtre de recherche -->
-      <tr *ngFor="let personne of personnes | filter : rechercheAdressePersonne" class="personne-container">
+      <tr *ngFor="let personne of personnes | filter: rechercheAdressePersonne" class="personne-container">
         <td [ngClass]="{'chef-menage' : personne.Chef_Menage}" >{{ personne.Chef_Menage ? 'Oui' : 'Non' }}</td>
         <td>{{ personne.Nom }}</td>
         <td>{{ personne.Prenom }}</td>

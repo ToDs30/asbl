@@ -9,6 +9,8 @@ import { AddCommentaireComponent } from './add-commentaire/add-commentaire.compo
 import { ListeCommentaireComponent } from './liste-commentaire/liste-commentaire.component';
 import { GalerieComponent } from './galerie/galerie.component';
 import { InfoComponent } from './info/info.component';
+import { AddBenevoleComponent } from './add-benevole/add-benevole.component';
+import { ListeBenevoleComponent } from './liste-benevole/liste-benevole.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,9 @@ const routes: Routes = [
   { path: 'app-liste-commentaire', component: ListeCommentaireComponent},
   { path: 'galerie', component: GalerieComponent},
   { path: 'info', component: InfoComponent},
+  { path : 'add-benevole', component: AddBenevoleComponent},
+  { path : 'app-liste-benevole', component: ListeBenevoleComponent}
+  
 ];
 
 @NgModule({
