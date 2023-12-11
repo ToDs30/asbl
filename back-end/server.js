@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 app.use("/api", router);
 
 // Définit la route pour la page d'accueil
-app.get('/', (req, res) => {
+app.get('/app-index', (req, res) => {
   res.end('Hello coucou');
 });
 

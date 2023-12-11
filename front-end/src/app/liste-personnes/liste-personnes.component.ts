@@ -38,31 +38,35 @@ export class ListePersonnesComponent implements OnInit {
         this.personnes = data;
   
         // Filtrer les personnes en fonction de la recherche
-        const personnesFiltrees = this.personnes.filter(personne =>
-          personne.Rue.toLowerCase().includes(this.rechercheAdressePersonne.toLowerCase()) ||
-          personne.Numero.toString().toLowerCase().includes(this.rechercheAdressePersonne.toLowerCase())
-        );
-  
-        // Recalcule les statistiques basées sur les résultats de la recherche
-        this.nombreMenage = personnesFiltrees.filter(personne => personne.Chef_Menage === true).length;
-        this.nombreHandicape = personnesFiltrees.filter(personne => personne.Handicape === true).length;
-        this.nombreImmigres = personnesFiltrees.filter(personne => personne.Immigres === true).length;
-        this.nombreSansAbris = personnesFiltrees.filter(personne => personne.Sans_Abris === true).length;
-        this.nombreSansPapier = personnesFiltrees.filter(personne => personne.Sans_Papier === true).length;
-        this.nombreFemme = personnesFiltrees.filter(personne => personne.Femme === true).length;
-        this.nombreBebe0_6 = personnesFiltrees.filter(personne => personne.Bebe_0_6_Mois === true).length;
-        this.nombreBebe6_24 = personnesFiltrees.filter(personne => personne.Bebe_6_24_Mois === true).length;
-        this.nombreEnfant2_14 = personnesFiltrees.filter(personne => personne.Enfants_2_14_Ans === true).length;
-        this.nombreAdos14_18 = personnesFiltrees.filter(personne => personne.Ados_14_18_Ans === true).length;
-        this.nombreJ_Adulte = personnesFiltrees.filter(personne => personne.J_Adulte_18_24_Ans === true).length;
-        this.nombrerAdulte = personnesFiltrees.filter(personne => personne.Adultes_25_64_Ans === true).length;
-        this.nombrePensionne = personnesFiltrees.filter(personne => personne.Pensionne === true).length;
-          // Calcule le nombre de personnes dans la liste
-        this.nombrePersonne = personnesFiltrees.length;
-  
+        // const personnesFiltrees = this.personnes.filter(personne =>
+        //   personne.Rue.toLowerCase().includes(this.rechercheAdressePersonne.toLowerCase()) ||
+        //   personne.Numero.toString().toLowerCase().includes(this.rechercheAdressePersonne.toLowerCase())
+        // );
+          this.updateStatistiques(this.personnes);
+        
       }, error => {
         console.error('Erreur lors de la récupération des bénéficiaires : ', error);
       });
+  }
+  updateStatistiques(personnesFiltrees:any[]){
+    
+    // Recalcule les statistiques basées sur les résultats de la recherche
+    this.nombreMenage = personnesFiltrees.filter(personne => personne.Chef_Menage === true).length;
+    this.nombreHandicape = personnesFiltrees.filter(personne => personne.Handicape === true).length;
+    this.nombreImmigres = personnesFiltrees.filter(personne => personne.Immigres === true).length;
+    this.nombreSansAbris = personnesFiltrees.filter(personne => personne.Sans_Abris === true).length;
+    this.nombreSansPapier = personnesFiltrees.filter(personne => personne.Sans_Papier === true).length;
+    this.nombreFemme = personnesFiltrees.filter(personne => personne.Femme === true).length;
+    this.nombreBebe0_6 = personnesFiltrees.filter(personne => personne.Bebe_0_6_Mois === true).length;
+    this.nombreBebe6_24 = personnesFiltrees.filter(personne => personne.Bebe_6_24_Mois === true).length;
+    this.nombreEnfant2_14 = personnesFiltrees.filter(personne => personne.Enfants_2_14_Ans === true).length;
+    this.nombreAdos14_18 = personnesFiltrees.filter(personne => personne.Ados_14_18_Ans === true).length;
+    this.nombreJ_Adulte = personnesFiltrees.filter(personne => personne.J_Adulte_18_24_Ans === true).length;
+    this.nombrerAdulte = personnesFiltrees.filter(personne => personne.Adultes_25_64_Ans === true).length;
+    this.nombrePensionne = personnesFiltrees.filter(personne => personne.Pensionne === true).length;
+      // Calcule le nombre de personnes dans la liste
+    this.nombrePersonne = personnesFiltrees.length;
+
   }
   
   

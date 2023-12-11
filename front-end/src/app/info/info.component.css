@@ -1,60 +1,43 @@
-
-.adresse {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 30px 4px 8px rgba(0, 0, 0, 0.1);
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/images/batiment.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: calc(25% - 20px); 
-}
-.img{
-    width: 300px;
-    height: 300px;
-}
-.adresse h3 {
-    color: #0011ff;
-    margin-bottom: 8px;
-    font-size: 1.2em;
 }
 
-
-/* Style pour la section Jours d'ouverture et Horaire de distribution */
-.ouvert,
-.Distribution {
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
+.ouvert {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
-    width: calc(25% - 20px); /* 50% de la largeur moins la marge */
-    margin-right: 20px; /* Ajoute une marge à droite pour l'espace entre les sections */
+    width: 80%;
+    max-width: 600px;
 }
 
-.ouvert h3,
-.Distribution h3 {
-    color: #0011ff;
-    margin-bottom: 8px;
+.adresse {
+    background-color: rgba(0, 0, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    width: 800px;
+    max-width: 800px;
+    height: 50vh; /* 100% de la hauteur de la vue */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Style pour les sous-sections Produit frais et Produit FSE+ et produit sec */
-.frais,
-.sec {
-    margin-bottom: 15px;
-}
-
-.frais h4,
-.sec h4 {
-    color: #0011ff;
-    margin-bottom: 8px;
-}
-
-.frais p,
-.sec p {
-    margin: 3px 0;
-    color: #333;
+.adresse iframe {
+    width: 600px; /* Ajustez la largeur de l'iframe pour qu'elle soit à 100% du conteneur parent */
+    height: 350px; /* Ajustez la hauteur de l'iframe pour qu'elle soit à 100% du conteneur parent */
+    /* Ajoutez d'autres propriétés CSS au besoin */
 }

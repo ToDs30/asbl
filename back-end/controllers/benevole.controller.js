@@ -52,7 +52,33 @@ const benevolesController = {
             console.error(error);
             res.status(500).send("Internal Server Error");
         }
+    },
+
+    deleteBenevole: async (req, res) => {
+        try {
+            const db = await createDbConnection();
+            const benevoleId = req.params.id;
+
+            // Vérifiez si l'ID est un nombre valide
+            if (isNaN(benevoleId)) {
+                res.status(400).json({ message: 'L\'ID du bénévole n\'est pas valide' });
+                return;
+            }
+
+            const query = await db.query(`DELETE FROM Benevole WHERE IdBenevole = ${benevoleId}`);
+            
+            if (query) {
+                res.status(200).json({ message: 'Bénévole supprimé' });
+            } else {
+                res.status(404).json({ message: 'Bénévole non trouvé' });
+            }
+        } catch (error) {
+            console.error(error);
+            res.status(500).send("Internal Server Error");
+        }
     }
+
+
 };
 module.exports = benevolesController;
 	

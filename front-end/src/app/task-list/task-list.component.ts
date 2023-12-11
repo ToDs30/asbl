@@ -41,4 +41,13 @@ export class TaskListComponent implements OnInit {
     // Mise à jour de l'index de la ligne sélectionnée
     this.selectedRowIndex = index;
   }
+
+  deleteTask(id: number): void {
+    this.http.delete(`http://localhost:8081/api/task/delete/${id}`)
+      .subscribe(() => {
+        this.ngOnInit();
+      }, error => {
+        console.error('Erreur lors de la suppression de la tâche : ', error);
+      });
+  }
 }

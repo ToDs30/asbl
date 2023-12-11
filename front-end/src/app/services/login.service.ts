@@ -15,8 +15,8 @@ export class ExpressService {
   constructor(private http: HttpClient) {}
 
   // Définit une méthode pour récupérer les bénéficiaires depuis l'API
-  getBenevole(): Observable<any> {
-    return this.http.get(`${this.expressUrl}/benevole`);
+  getLogin(): Observable<any> {
+    return this.http.get(`${this.expressUrl}/login`);
   }
 
   // Définit une méthode pour appeler une route personnalisée de l'API Express avec des données
@@ -24,10 +24,8 @@ export class ExpressService {
     console.log(data); // Affiche les données dans la console (à des fins de débogage)
 
     // Effectue une requête POST vers l'API Express avec les données fournies
-    return this.http.post(`${this.expressUrl}/benevole/add-benevole`, data);
+    return this.http.post(`${this.expressUrl}/login/add-login`, data);
   }
 
-  deleteBenevole(id: number): Observable<any> {
-    return this.http.delete(`${this.expressUrl}/benevole/delete/${id}`);
-  }
+ 
 }

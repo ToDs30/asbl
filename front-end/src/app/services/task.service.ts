@@ -32,4 +32,8 @@ export class ExpressService {
         // Effectue une requête HTTP POST vers l'URL de l'API pour appeler la route 'add-task' avec les données fournies
         return this.http.post(`${this.expressUrl}/task/add-task`, data);
     }
+
+    deleteTask(id: number): Observable<any> {
+        return this.http.delete(`${this.expressUrl}/task/delete/${id}`);
+      }
 }

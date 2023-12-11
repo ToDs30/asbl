@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-liste-commentaire',
   templateUrl: './liste-commentaire.component.html',
@@ -11,7 +12,7 @@ export class ListeCommentaireComponent {
 
    
    // Constructeur du composant avec injection du service HttpClient
-   constructor(private http: HttpClient) {}
+   constructor(private http: HttpClient, private toastr: ToastrService) {}
  
    // Méthode du cycle de vie OnInit, appelée après la création du composant
    ngOnInit(): void {
@@ -22,7 +23,17 @@ export class ListeCommentaireComponent {
          this.commentaires = data;
          console.log(this.commentaires);
        }, error => {
-         console.error('Erreur lors de la récupération des tâches : ', error);
+         console.error('Erreur lors de la récupération des messages : ', error);
        });
    }
+
+   deleteCommentaire(id: number): void {
+    this.http.delete(`http://localhost:8081/api/commentaire/delete/${id}`)
+      .subscribe(() => {
+        this.ngOnInit();
+        this.toastr.success('Message supprimé avec succès', 'Succès');
+      }, error => {
+        console.error('Erreur lors de la suppression du message : ', error);
+      });
+  }
 }

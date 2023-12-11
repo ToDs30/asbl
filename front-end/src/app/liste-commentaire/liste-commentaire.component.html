@@ -13,6 +13,7 @@
                 <th>Date</th>
                 <th>Sujet</th>
                 <th>Messages</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         
@@ -25,9 +26,12 @@
                 <td>{{ commentaire.Prenom }}</td>
                 <td>{{ commentaire.Date_COM | date: 'dd/MM/yyyy' }}</td>
                 <td>{{ commentaire.Sujet }}</td>
-                <td>{{ commentaire.Descrip}}</td>                        
+                <td>{{ commentaire.Descrip}}</td>     
+                <td>
+                    <button (click)="deleteCommentaire(commentaire.ID)">Supprimer</button>
+                  </td>                   
             </tr>
         </tbody>
     </table>
+    
   </div>
-  

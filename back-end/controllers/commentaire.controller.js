@@ -49,7 +49,30 @@ const commentairesController = {
             console.error(error);
             res.status(500).send("Internal Server Error");
         }
+    },
+    deleteCommentaire: async (req, res) => {
+        try {
+            const db = await createDbConnection();
+            const commentaireId = req.params.id;
+
+            if (isNaN(commentaireId)) {
+                res.status(400).json({ message: 'L\'ID du commentaire n\'est pas valide' });
+                return;
+            }
+
+            const query = await db.query(`DELETE FROM commentaire WHERE ID = ${commentaireId}`);
+            
+            if (query) {
+                res.status(200).json({ message: 'Commentaire supprimé' });
+            } else {
+                res.status(404).json({ message: 'Commentaire non trouvé' });
+            }
+        } catch (error) {
+            console.error(error);
+            res.status(500).send("Internal Server Error");
+        }
     }
 };
 
 module.exports = commentairesController;
+

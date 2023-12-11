@@ -1,0 +1,15 @@
+<body class="background-image body-container">
+
+<div class="Logins">
+    <form #loginForm="ngForm">
+      <label for="Username">Utilisateur : </label>
+      <input type="text" name="Username" [(ngModel)]="username" placeholder="Username" required>
+  
+      <label for="Password">Mot de passe : </label>
+      <input type="password" name="Password" [(ngModel)]="password" placeholder="Password" required>
+  
+      <button (click)="login(); loginForm.reset()" type="button">Connexion</button>
+      <button (click)="logout(); loginForm.reset()" type="button">Déconnexion</button>
+    </form>
+  </div>
+</body>

@@ -15,11 +15,19 @@ import { IndexComponent } from './index/index.component';
 import { AddCommentaireComponent } from './add-commentaire/add-commentaire.component';
 import { ListeCommentaireComponent } from './liste-commentaire/liste-commentaire.component';
 import { CommonModule } from '@angular/common';
-import { GalerieComponent } from './galerie/galerie.component';
 import { InfoComponent } from './info/info.component';
 import { ListeBenevoleComponent } from './liste-benevole/liste-benevole.component';
 import { AddBenevoleComponent } from './add-benevole/add-benevole.component';
 import { GsmFormatPipe } from './pipes/gsmFormat.pipe';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from  '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { AddLoginComponent } from './add-login/add-login.component';
+
+
+
+
+
 
 
 @NgModule({
@@ -33,11 +41,17 @@ import { GsmFormatPipe } from './pipes/gsmFormat.pipe';
     IndexComponent,
     AddCommentaireComponent,
     ListeCommentaireComponent,
-    GalerieComponent,
     InfoComponent,
     ListeBenevoleComponent,
     AddBenevoleComponent,
     GsmFormatPipe,
+    LoginComponent,
+    AddLoginComponent,
+    
+    
+    
+
+    
   ],
   imports: [
     BrowserModule,
@@ -45,7 +59,13 @@ import { GsmFormatPipe } from './pipes/gsmFormat.pipe';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    ToastrModule.forRoot({ 
+      positionClass: 'toast-top-center'}),
+      BrowserAnimationsModule,
+      AppRoutingModule,
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

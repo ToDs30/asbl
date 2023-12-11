@@ -1,0 +1,15 @@
+<body class="background-image body-container">
+
+    <div class="Logins">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <label for="UserName">Utilisateur : </label>
+          <input type="text" name="UserName" id="UserName" placeholder="Utilisateur" formControlName="UserName">
+      
+          <label for="PasswordHash">Mot de passe : </label>
+          <input type="password" name="PasswordHash" id="PasswordHash" placeholder="Password" formControlName="PasswordHash" >
+      
+          <button type="submit">Soumettre</button>
+          
+        </form>
+      </div>
+</body>

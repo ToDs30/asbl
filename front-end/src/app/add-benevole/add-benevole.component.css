@@ -1,5 +1,18 @@
 /* Styles spécifiques pour le formulaire d'inscription des bénévoles */
 
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/images/batiment.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 h1 {
     color: #fff; /* Couleur du texte du titre */
     background-color: #336699; /* Nouvelle couleur de fond du titre */

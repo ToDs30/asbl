@@ -31,16 +31,18 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 th {
     background-color: #4CAF50; /* Couleur de fond de l'en-tête */
-    color: white; /* Couleur du texte de l'en-tête */
+    color: white;
+    border-radius: 30px; /* Couleur du texte de l'en-tête */
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+    background-color:#336699;
+    color: white; /* Couleur de fond pour les lignes paires */
 }
 
 .commentaire-container td {

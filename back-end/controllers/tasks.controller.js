@@ -67,7 +67,30 @@ const taskController = {
       console.error(error);
       res.status(500).send("Internal Server Error");
     }
-  }
+  },
+
+  deleteTask: async (req, res) => {
+    try {
+        const db = await createDbConnection();
+        const taskId = req.params.id;
+
+        if (isNaN(taskId)) {
+            res.status(400).json({ message: 'L\'ID de la tâche n\'est pas valide' });
+            return;
+        }
+
+        const query = await db.query(`DELETE FROM Tasks WHERE TaskID = ${taskId}`);
+        
+        if (query) {
+            res.status(200).json({ message: 'Tâche supprimée' });
+        } else {
+            res.status(404).json({ message: 'Tâche non trouvée' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+}
 };
 
 // Exporte le contrôleur de tâches pour être utilisé ailleurs dans l'application

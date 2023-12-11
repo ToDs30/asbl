@@ -6,4 +6,8 @@ benevolesRouter.post('/add-benevole', benevolesController.addBenevole);
 
 benevolesRouter.get('/getAll', benevolesController.getAll);
 
+benevolesRouter.delete('/delete/:id', benevolesController.deleteBenevole);
+
 module.exports = benevolesRouter;
+
+

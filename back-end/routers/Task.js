@@ -10,5 +10,8 @@ taskRouter.post('/add-task', taskController.addTasks);
 // Définit une route GET pour récupérer la liste de toutes les tâches en utilisant la méthode getAll du contrôleur
 taskRouter.get('/getAll', taskController.getAll);
 
+taskRouter.delete('/delete/:id', taskController.deleteTask);
+
 // Exporte le routeur taskRouter pour être utilisé dans d'autres fichiers
 module.exports = taskRouter;
+

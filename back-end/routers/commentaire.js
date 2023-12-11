@@ -11,5 +11,8 @@ commentairesRouter.post('/add-commentaire', commentairesController.addCommentair
 // Définit une route GET pour récupérer la liste de tous les commentaires en utilisant la méthode getAll du 
 commentairesRouter.get('/getAll', commentairesController.getAll);
 
+commentairesRouter.delete('/delete/:id', commentairesController.deleteCommentaire);
+
 // Exporte le routeur commentairesRouter pour être utilisé dans d'autres fichiers 
 module.exports = commentairesRouter;
+

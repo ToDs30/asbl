@@ -12,6 +12,7 @@
               <th>Description</th>
               <th>A faire pour le</th>
               <th>Action</th>
+              <th>Supprimer</th>
           </tr>
       </thead>
       
@@ -28,6 +29,9 @@
               <!-- Colonne d'action avec un bouton 'Effectuer' qui appelle la méthode effectuerClick avec l'index i -->
               <td>
                   <button type="button" (click)="effectuerClick(i)">Effectuer</button>
+              </td>
+              <td>
+                <button (click)="deleteTask(task.TaskID)">Supprimer</button>
               </td>
           </tr>
       </tbody>

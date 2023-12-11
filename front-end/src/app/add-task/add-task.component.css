@@ -1,4 +1,16 @@
 /* Style du formulaire */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/images/login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 form {
   max-width: 400px;
   margin: auto;

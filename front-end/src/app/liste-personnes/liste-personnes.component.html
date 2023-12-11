@@ -47,7 +47,7 @@
 
 <!-- Tableau affichant les détails des personnes avec filtre de recherche -->
 <div>
-  <table>
+  <table>z
     <thead>
       <tr>
         <th>Chef de ménage</th>
@@ -74,7 +74,7 @@
     </thead>
     <tbody>
       <!-- Boucle sur les personnes avec filtre de recherche -->
-      <tr *ngFor="let personne of personnes | filter: rechercheAdressePersonne" class="personne-container">
+      <tr *ngFor="let personne of personnes | filter: rechercheAdressePersonne " class="personne-container">
         <td [ngClass]="{'chef-menage' : personne.Chef_Menage}" >{{ personne.Chef_Menage ? 'Oui' : 'Non' }}</td>
         <td>{{ personne.Nom }}</td>
         <td>{{ personne.Prenom }}</td>
