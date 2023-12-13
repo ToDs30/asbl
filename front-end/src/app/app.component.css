@@ -1,65 +1,78 @@
-/* styles.css */
+/* Barre de navigation principale */
 .navbar-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white; /* Fond blanc pour la barre principale */
+  background-color:blue; 
   padding: 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
+/* Styles pour les liens et boutons */
 .navbar-item a,
 .dropbtn {
   text-decoration: none;
-  color: blue; /* Couleur sombre pour le texte des boutons */
-  font-weight: bold; /* Texte en gras */
+  color: white;
+  font-weight: bold;
   margin: 0 10px;
   transition: color 0.3s ease;
+  background-color: blue; 
 }
 
+/* Effet de survol pour les liens et boutons */
 .navbar-item a:hover,
 .dropdown-content a:hover {
   color: red;
 }
 
+/* Menu déroulant principal */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+/* Bouton du menu déroulant */
 .dropbtn {
   padding: 12px;
   font-size: 16px;
   border: none;
-  background-color: white; /* Fond blanc pour le bouton */
 }
 
+/* Contenu du menu déroulant */
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white; /* Fond blanc pour le menu déroulant */
+  background-color: blue;
   min-width: 160px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
 }
 
+/* Styles pour les liens du menu déroulant */
 .dropdown-content a {
-  color:rgb(11, 11, 200);
+  color: rgb(243, 243, 248);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  background-color: blue; 
+  border-radius: 10px;
 }
 
+/* Effet de survol pour les liens du menu déroulant */
 .dropdown-content a:hover {
-  color:red;
+  color: red;
 }
 
+/* Affichage du menu déroulant au survol */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Lien de connexion à droite de la page */
 .Logins {
   display: flex;
   align-items: center;
@@ -67,18 +80,24 @@
   color: #333;
 }
 
+/* Section logo et titre */
 .Accueil {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; /* Fond blanc pour .Accueil */
+  background-color: blue ;
+  border-radius: 10px;
 }
 
+/* Style pour l'image du logo */
 .Accueil img {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
 }
 
+/* Style pour l'arrière-plan de l'image du logo */
 .Accueil .img-bg {
-  background-color: white; /* Fond blanc pour l'image */
+  background-color: blue;
+ 
 }

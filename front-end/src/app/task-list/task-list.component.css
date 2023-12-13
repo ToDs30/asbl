@@ -1,3 +1,19 @@
+.background-image {
+  background-image: url('../../assets/images/ciel.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Assurez-vous que le contenu excédentaire est masqué */
+}
+
+
 body {
   background: linear-gradient(0deg, #0011ff 0%, #9eb3ff 100%);
   margin: 0;
@@ -27,7 +43,7 @@ main {
 
 table {
   border: 2px solid #fff;
-  border-radius: 8px;
+  
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;

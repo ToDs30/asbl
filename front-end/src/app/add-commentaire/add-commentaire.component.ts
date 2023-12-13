@@ -36,6 +36,7 @@ onSubmit() {
       // Fonction de rappel pour la gestion de la réponse réussie
       next: response => {
         console.log('Réponse du back-end : ', response);
+        this.commentaireForm.reset();
       },
       // Fonction de rappel pour la gestion des erreurs
       error: err => {

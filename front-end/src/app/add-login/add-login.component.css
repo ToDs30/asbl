@@ -1,0 +1,79 @@
+/* Formulaire lié au groupe de formulaires 'taskForm' et gérant l'événement de soumission */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/images/bleu.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centre verticalement et horizontalement */
+}
+
+form {
+    max-width: 700px; /* Ajustez la largeur du formulaire selon vos besoins */
+    width: 100%; /* Ajout d'une largeur de 100% pour s'adapter à la largeur du conteneur parent */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajout du style du titre */
+h3 {
+    color: #fff;
+    background-color: #336699;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Style des champs de formulaire */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Couleur du texte des étiquettes */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style du bouton de soumission */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style pour les messages d'erreur, si nécessaire */
+.error-message {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+/* Ajout du style de la classe button-container */
+.button-container {
+    text-align: center;
+    margin-top: 20px; 
+    align-items: center;
+}

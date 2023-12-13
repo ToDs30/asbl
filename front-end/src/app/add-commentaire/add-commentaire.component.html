@@ -1,6 +1,8 @@
 <body class="background-image body-container">
 <form [formGroup]="commentaireForm" (ngSubmit)="onSubmit()">
-<div>
+
+    <div>
+        <h3>Envoyez nous un message</h3>
     <label for="Nom">Nom</label>
     <input type="text" placeholder="Entrez votre Nom" id="Nom" formControlName="Nom">
 
@@ -16,8 +18,10 @@
     <label for="Descrip">Description</label>
     <input type="text" placeholder="Ecrivez votre message " id="Descrip" formControlName="Descrip">
     
-    <button (click)="onSubmit" > Soumettre </button>
-
+    <p>Laissez votre numéro de gsm à lin fin de votre message</p>
+    <div class="button-container">
+        <button (click)="onSubmit">Envoyer</button>
+      </div>
 </div>
 
 

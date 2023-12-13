@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: '/',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
-
+  constructor(private titleService: Title) { }
+  ngOnInit() {
+    this.titleService.setTitle('ASBL Saint Vincent de Paul Docherie');
+  }
+  
 }

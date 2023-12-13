@@ -1,3 +1,4 @@
+<body class="background-image body-container">
 <br><br>
 <div>
   <table class="personne-table">
@@ -32,6 +33,7 @@
         <th>Date de naissance</th>
         <th>Rue</th>
         <th>Numero</th>
+        <th>Boite</th>
         <th>Code Postal</th>
         <th>Commune</th>
       </tr>
@@ -45,6 +47,7 @@
         <td><strong>{{ benevole.Date_Naissance | date: 'dd/MM/yyyy' }}</strong></td>
         <td><strong>{{ benevole.Rue }}</strong></td>
         <td><strong>{{ benevole.Numero }}</strong></td>
+        <td><strong>{{ benevole.Boite}}</strong></td>
         <td><strong>{{ benevole.CodeP }}</strong></td>
         <td><strong>{{ benevole.Commune }}</strong></td>
         <td>
@@ -55,3 +58,4 @@
     </tbody>
   </table>
 </div>
+</body>

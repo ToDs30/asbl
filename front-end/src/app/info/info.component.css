@@ -1,43 +1,50 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../../assets/images/batiment.PNG');
+    background-image: url('../../assets/images/pexels-photo-3653997.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Utilisez une disposition en ligne pour les enfants */
+    justify-content: space-around; /* Espacement équitable entre les enfants */
     align-items: center;
-}
-
-.ouvert {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
+  }
+  
+  .doc,
+  .adresse {
+    width: 30%; /* Largeur de chaque colonne, la même que Distribution, Activites et Presentation */
+    box-sizing: border-box;
+    margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    width: 80%;
-    max-width: 600px;
-}
-
-.adresse {
-    background-color: rgba(0, 0, 255, 0.2);
+    background-color: rgba(252, 252, 254, 0.3);
+    border: 2px solid #3498db;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    width: 800px;
-    max-width: 800px;
-    height: 50vh; /* 100% de la hauteur de la vue */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.adresse iframe {
-    width: 600px; /* Ajustez la largeur de l'iframe pour qu'elle soit à 100% du conteneur parent */
-    height: 350px; /* Ajustez la hauteur de l'iframe pour qu'elle soit à 100% du conteneur parent */
-    /* Ajoutez d'autres propriétés CSS au besoin */
-}
+    text-align: center;
+  }
+  
+  .doc img,
+  .adresse img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .doc h3,
+  .adresse h3 {
+    color: #3498db;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .doc p,
+  .adresse p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .adresse {
+    text-align: center; /* Alignez le texte à gauche dans la colonne adresse */
+  }
+  

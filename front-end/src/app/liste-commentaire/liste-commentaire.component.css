@@ -1,51 +1,66 @@
-body {
+.background-image {
+    background-image: url('../../assets/images/ciel.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Assurez-vous que le contenu excédentaire est masqué */
+  }
+  
+  body {
     background: linear-gradient(0deg, #0011ff 0%, #9eb3ff 100%);
     font-family: 'Arial', sans-serif;
     color: #fff; /* Couleur du texte par défaut */
-}
-
-div {
+  }
+  
+  div {
     max-width: 800px; /* Ajustez la largeur de la liste des messages selon vos besoins */
     margin: 50px auto; /* Centrer la liste des messages sur la page */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour une meilleure lisibilité */
-    border-radius: 10px;
-}
-
-h2 {
+  }
+  
+  h2 {
     color: #fff; /* Couleur du texte du titre */
     background-color: #336699; /* Nouvelle couleur de fond du titre */
     padding: 15px; /* Espace intérieur autour du texte */
-    border-radius: 8px; /* Coins arrondis */
     text-align: center; /* Centrer le texte */
-}
-
-
-
-table {
+  }
+  
+  table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-}
-
-th, td {
+  }
+  
+  th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-}
-
-th {
+    font-weight: bold; /* Mettre le texte en gras */
+  }
+  
+  th {
     background-color: #4CAF50; /* Couleur de fond de l'en-tête */
     color: white;
-    border-radius: 30px; /* Couleur du texte de l'en-tête */
-}
-
-tr:nth-child(even) {
-    background-color:#336699;
-    color: white; /* Couleur de fond pour les lignes paires */
-}
-
-.commentaire-container td {
+  }
+  
+  tr:nth-child(even) {
+    background-color: #336699;
+     /* Couleur de fond pour les lignes paires */
+  }
+  tr:nth-child(odd) {
+    background-color: #4da5fc;
+     /* Couleur de fond pour les lignes paires */
+  }
+  
+  .commentaire-container td {
     /* Styles spécifiques pour les cellules de la liste des messages si nécessaire */
-}
-
+  }
+  
